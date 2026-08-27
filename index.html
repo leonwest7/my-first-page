@@ -3,46 +3,146 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>我的第一张网页</title>
-  <style>
-    * { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-      font-family: system-ui, sans-serif;
-      background: linear-gradient(135deg, #dbeafe, #f5d0fe);
-      color: #202124;
-    }
+  <title>Leon｜我的个人主页</title>
 
-    main {
-      width: min(560px, 100%);
-      padding: 40px;
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.92);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-    }
-
-    h1 { font-size: 40px; }
-    p { line-height: 1.8; color: #555; }
-
-    a {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 12px 18px;
-      border-radius: 12px;
-      background: #e11d48;
-      color: white;
-      text-decoration: none;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="#home">LEON</a>
+
+      <div class="nav-links">
+        <a href="#about">关于我</a>
+        <a href="#projects">我的项目</a>
+        <a href="#contact">联系我</a>
+
+        <button
+          id="theme-toggle"
+          type="button"
+          aria-label="切换深色模式"
+        >
+          🌙
+        </button>
+      </div>
+    </nav>
+  </header>
+
   <main>
-<div>👋 Welcome to my blue space </div>
-<h1>Hello I'm Leon</h1>
-<p>This is my first github project 让世界看到我的进步 </p>
-<a href="https://github.com/leonwest7">Check My GitHub</a>
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">👋 Welcome to my digital space</p>
+
+        <h1>
+          你好，我是 <span>Leon</span>
+        </h1>
+
+        <p class="hero-text">
+          我正在学习 GitHub 和网页开发。
+          这个网站将用来记录我的进步，并展示我完成的项目。
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">
+            查看我的项目
+          </a>
+
+          <a
+            class="button secondary"
+            href="https://github.com/leonwest7"
+            target="_blank"
+            rel="noreferrer"
+          >
+            访问 GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <p class="section-label">ABOUT ME</p>
+        <h2>关于我</h2>
+
+        <div class="about-card">
+          <p>
+            这是我第一次系统学习 GitHub。
+            我已经学会创建仓库、Commit、修改网页和使用 GitHub Pages。
+          </p>
+
+          <p>
+            接下来，我会继续学习 HTML、CSS、JavaScript，
+            并把自己的作品发布到这里。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <p class="section-label">MY WORK</p>
+        <h2>我的项目</h2>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-number">01</div>
+            <h3>我的第一个网页</h3>
+            <p>
+              使用 HTML 和 CSS 创建，并通过 GitHub Pages 发布。
+            </p>
+            <span class="project-tag">HTML · CSS</span>
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">02</div>
+            <h3>GitHub 学习记录</h3>
+            <p>
+              记录 Repository、Commit、Branch 和 Pull Request 的学习过程。
+            </p>
+            <span class="project-tag">GitHub</span>
+          </article>
+
+          <article class="project-card future-project">
+            <div class="project-number">03</div>
+            <h3>下一个项目</h3>
+            <p>
+              这里将展示我接下来完成的新作品。
+            </p>
+            <span class="project-tag">Coming soon</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-card">
+        <div>
+          <p class="section-label">CONTACT</p>
+          <h2>一起见证我的进步</h2>
+          <p>你可以在 GitHub 上查看我的代码和后续项目。</p>
+        </div>
+
+        <a
+          class="button primary"
+          href="https://github.com/leonwest7"
+          target="_blank"
+          rel="noreferrer"
+        >
+          前往我的 GitHub
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        © <span id="current-year"></span> Leon · Built while learning GitHub
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
